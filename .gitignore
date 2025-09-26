@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar todas las imágenes dentro de assets/images
+src/assets/images/
+
