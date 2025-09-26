@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --color-primary: #F5EFE6;
+  --color-secondary: #C5BAA5;
+  --color-accent: #E07A5F;
+  --color-surface: #3D405B;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gris-claro: #CCCCCC;
+  --color-gris-oscuro: #333333;
+}
+
+body {
+  font-family: 'Urbanist', sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 200;
+  letter-spacing: -2px;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: lowercase;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#nosotros {
+  background-color: var(--color-surface);
+  color: var(--color-white);
+}
+
+#historia {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+}
+
+#main-footer {
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-gris-claro);
+  padding: 45px 0;
+}
