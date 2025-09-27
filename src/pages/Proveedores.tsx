@@ -21,12 +21,15 @@ const Proveedores = () => {
     <section id='proveedores' className='py-20'>
       <div className="max-w-7xl mx-auto px-3">
         <h2>Proveedores</h2>
-        <table>
+        <table className="tabla-reporte">
           <thead>
             <tr>
               <th>CÓDIGO</th>
               <th>EMPRESA</th>
               <th>CONTACTO</th>
+              <th>CARGO</th>
+              <th>CIUDAD</th>
+              <th>PAIS</th>
             </tr>
           </thead>
           <tbody>
@@ -35,6 +38,9 @@ const Proveedores = () => {
                 <td>{proveedor.idproveedor}</td>
                 <td>{proveedor.nombreempresa}</td>
                 <td>{proveedor.nombrecontacto}</td>
+                <td>{proveedor.cargocontacto}</td>
+                <td>{proveedor.ciudad}</td>
+                <td>{proveedor.pais}</td>
               </tr>
             )}
           </tbody>

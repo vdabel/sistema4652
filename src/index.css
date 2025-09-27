@@ -51,3 +51,49 @@ h3 {
   color: var(--color-gris-claro);
   padding: 45px 0;
 }
+
+a.boton-link {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: solid var(--color-accent) 1px;
+  display: inline-block;
+}
+
+a.boton-link:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+  transition: all 0.3s ease;
+}
+
+.tabla-reporte {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tabla-reporte th, .tabla-reporte td {
+  border: 1px solid var(--color-gris-oscuro);
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.tabla-reporte thead th {
+  background-color: var(--color-surface);
+  color: var(--color-white);
+  text-align: left;
+}
+
+.tabla-reporte thead td {
+  border: solid 1px var(--color-gris-claro);
+}
+
+.tabla-reporte tbody tr:nth-child(even) {
+  background-color: var(--color-primary);
+}
+
+.tabla-reporte tbody tr:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-black);
+  transition: all 0.3s ease;
+}

@@ -14,23 +14,28 @@ const MainBanner = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    autoplay: true
   };
 
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div>
-          <img src={slide1} alt="" className="w-full flex-shrink-0" />
+        <div className="relative">
+          <img src={slide1} alt="" className="w-full" />
+          <div className="banner-caption">
+            <h5>Nuevos proyectos</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quia, omnis debitis et sit id autem vitae error! Excepturi quod tempora officia quibusdam blanditiis.</p>
+          </div>
         </div>
-        <div>
-          <img src={slide2} alt="" className="w-full flex-shrink-0" />
+        <div className="relative">
+          <img src={slide2} alt="" className="w-full" />
         </div>
-        <div>
-          <img src={slide3} alt="" className="w-full flex-shrink-0" />
+        <div className="relative">
+          <img src={slide3} alt="" className="w-full" />
         </div>
-        <div>
-          <img src={slide4} alt="" className="w-full flex-shrink-0" />
+        <div className="relative">
+          <img src={slide4} alt="" className="w-full" />
         </div>
       </Slider>
     </div>

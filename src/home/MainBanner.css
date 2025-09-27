@@ -7,7 +7,41 @@
   z-index: 1;
 }
 
-
 .slick-next::before, .slick-prev::before {
   font-size: 40px;
+}
+
+.slick-dots {
+  bottom: 50px;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+
+.slick-dots li button:before {
+  color: #000000;
+  font-size: 14px;
+}
+
+.slick-slide img {
+  display: block;
+  margin-bottom: -7px;
+}
+
+.banner-caption {
+  position: absolute;
+  bottom: 0;
+  color: var(--color-white);
+  width: 50%;
+  margin: 2rem;
+}
+
+.banner-caption h5 {
+  font-size: 4rem;
+  font-weight: 900;
 }
