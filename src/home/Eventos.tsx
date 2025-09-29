@@ -11,6 +11,7 @@ const Eventos = () => {
       <div className="max-w-7xl mx-auto px-3">
         <h2>Eventos</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img src={evento1} alt="Imagen de tarjeta" className="w-full h-48 object-cover" />
             <div className="p-6">
