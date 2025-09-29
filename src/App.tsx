@@ -31,6 +31,10 @@ function App() {
         </Routes>
 
 
+
+
+
+
         <MainFooter />
       </BrowserRouter>
     </>
