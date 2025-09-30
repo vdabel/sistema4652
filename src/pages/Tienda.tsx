@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader"
 import type { Categoria } from "../types/Categoria";
+import Productos from "../components/Productos";
 
 const Tienda = () => {
   const [listaCategorias, setListaCategorias] = useState<Categoria[]>([]);
@@ -47,6 +48,7 @@ const Tienda = () => {
               {categoriaSeleccionada &&
                 <p>Hay {categoriaSeleccionada.total} productos en total</p>
               }
+              <Productos codigoCategoria={categoriaSeleccionada ? categoriaSeleccionada.idcategoria : 0} />
             </div>
           </div>
         </div>
