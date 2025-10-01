@@ -16,7 +16,6 @@ function classNames(...classes: string[]) {
 
 export default function MainHeader() {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <Disclosure as="nav" className="relative bg-[var(--color-primary)]">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">

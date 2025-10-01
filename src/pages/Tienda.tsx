@@ -15,13 +15,11 @@ const Tienda = () => {
     fetch('https://servicios.campus.pe/categorias')
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         setListaCategorias(data);
       })
   }
 
   const seleccionarCategoria = (itemSeleccionado: Categoria): void => {
-    console.log(`Categoría seleccionada: ${itemSeleccionado.nombre}`);
     setCategoriaSeleccionada(itemSeleccionado);
   }
 
