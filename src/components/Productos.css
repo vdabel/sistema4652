@@ -1,0 +1,16 @@
+.icono-vista-rapida {
+  top: -20%;
+  transform: translate(-50%, 0%);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.icono-vista-rapida:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+
+}
+
+.card-producto:hover .icono-vista-rapida {
+  top: 37%;
+}
