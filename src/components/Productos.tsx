@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Producto } from "../types/Producto";
 import './Productos.css';
+import { Link } from "react-router-dom";
 
 interface ProductosProps {
   codigoCategoria: number;
@@ -14,13 +15,18 @@ const Productos = (props: ProductosProps) => {
     leerServicio(props.codigoCategoria);
   }, [props.codigoCategoria])
 
-  const leerServicio = (codCategoria: number) => {
-    fetch(`https://servicios.campus.pe/productos.php?idcategoria=${codCategoria}`)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        setListaProductos(data);
-      })
+  const leerServicio = async (codCategoria: number) => {
+    // fetch(`https://servicios.campus.pe/productos.php?idcategoria=${codCategoria}`)
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     console.log(data);
+    //     setListaProductos(data);
+    //   })
+
+    const response = await fetch(`https://servicios.campus.pe/productos.php?idcategoria=${codCategoria}`);
+    const data: Producto[] = await response.json();
+    console.log(data);
+    setListaProductos(data);
   }
 
   return (
@@ -33,7 +39,10 @@ const Productos = (props: ProductosProps) => {
           return (
 
             <div className="bg-white rounded-lg shadow-lg overflow-hidden border-1 border-gray-200 text-center relative card-producto" key={producto.idproducto}>
-              <img src={'https://servicios.campus.pe/' + (producto.imagenchica ? producto.imagenchica : 'imagenes/nofoto.jpg')} alt="Imagen de tarjeta" className="w-full h-64 object-cover px-8 pt-8 transition-transform duration-500 hover:scale-110" />
+
+              <Link to={"/productodetalles/" + producto.idproducto}>
+                <img src={'https://servicios.campus.pe/' + (producto.imagenchica ? producto.imagenchica : 'imagenes/nofoto.jpg')} alt="Imagen de tarjeta" className="w-full h-64 object-cover px-8 pt-8 transition-transform duration-500 hover:scale-110" />
+              </Link>
 
               <i className="fa-regular fa-eye bg-gray-200 absolute p-4 !inline-table rounded-full icono-vista-rapida" title="Vista rapida"></i>
 

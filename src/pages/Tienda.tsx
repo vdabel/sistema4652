@@ -11,12 +11,18 @@ const Tienda = () => {
     leerServicio();
   }, []);
 
-  const leerServicio = () => {
-    fetch('https://servicios.campus.pe/categorias')
-      .then(response => response.json())
-      .then(data => {
-        setListaCategorias(data);
-      })
+  const leerServicio = async () => {
+    // fetch('https://servicios.campus.pe/categorias')
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     setListaCategorias(data);
+    //   })
+
+    const response = await fetch('https://servicios.campus.pe/categorias');
+    const data: Categoria[] = await response.json();
+    console.log(data);
+    setListaCategorias(data);
+    setCategoriaSeleccionada(data[0]);
   }
 
   const seleccionarCategoria = (itemSeleccionado: Categoria): void => {
@@ -41,6 +47,7 @@ const Tienda = () => {
                 )}
               </ul>
             </div>
+
             <div className="w-full md:w-3/4 px-3">
               <h2>{categoriaSeleccionada?.nombre}</h2>
               {categoriaSeleccionada &&
@@ -48,6 +55,7 @@ const Tienda = () => {
               }
               <Productos codigoCategoria={categoriaSeleccionada ? categoriaSeleccionada.idcategoria : 0} />
             </div>
+
           </div>
         </div>
       </section>
