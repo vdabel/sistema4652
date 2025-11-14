@@ -48,15 +48,15 @@ const ProductoDetalles = () => {
               </tr>
               <tr>
                 <th>Proveedor</th>
-                <td></td>
+                <td>{productoSeleccionado?.proveedor}</td>
               </tr>
               <tr>
                 <th>Categoria</th>
-                <td></td>
+                <td>{productoSeleccionado?.categoria</td>
               </tr>
               <tr>
                 <th>Detalle</th>
-                <td></td>
+                <td>{productoSeleccionado?.descripcion}</td>
               </tr>
               <tr>
                 <th>País</th>
