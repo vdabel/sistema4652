@@ -29,9 +29,11 @@ const ProductoDetalles = () => {
 
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-3">
+
           <div className="w-full md:w-1/2 px-3">
             <img src={'https://servicios.campus.pe/' + (productoSeleccionado?.imagengrande ? productoSeleccionado.imagengrande : 'imagenes/nofoto.jpg')} alt="Imagen de tarjeta" className="w-full object-cover px-8 pt-8 transition-transform duration-500 hover:scale-110" />
           </div>
+
           <div className="w-full md:w-1/2 px-3">
             <table>
               <tr>
@@ -52,7 +54,7 @@ const ProductoDetalles = () => {
               </tr>
               <tr>
                 <th>Categoria</th>
-                <td>{productoSeleccionado?.categoria</td>
+                <td>{productoSeleccionado?.categoria}</td>
               </tr>
               <tr>
                 <th>Detalle</th>

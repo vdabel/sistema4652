@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import logo from './../assets/images/logo.png'
 
 const navigation = [
-  { name: 'Inversiones', url: '/inversiones' },
+  { name: 'Inicio', url: '/inversiones' },
   { name: 'Proveedores', url: '/proveedores' },
   { name: 'Empleados', url: '/empleados' },
   { name: 'Tienda', url: '/tienda' }
